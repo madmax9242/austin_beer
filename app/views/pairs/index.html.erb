@@ -1,23 +1,23 @@
-<table>
-  <thead>
-    <tr>
-      <th>Food</th>
-      <th>Beer</th>
-      <th>Beer Type</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @pairs.each do |pair| %>
-      <tr>
-        <td><%= pair.food %></td>
-        <td><%= pair.beer %></td>
-        <td><%= pair.beer_type %></td>
-        <td><%= link_to 'Show', pair %></td>
-        <td><%= link_to 'Edit', edit_pair_path(pair) %></td>
-        <td><%= link_to 'Destroy', pair, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<% @pairs.each do |pair| %>
+  <div class="food/beer list">
+    <p>
+      <strong>Food: </strong>
+      <%= pair.food %>
+    </p>
+
+    <p>
+      <strong>Beer: </strong>
+      <%= pair.beer %>
+    </p>
+
+    <p>
+      <strong>Type: </strong>
+      <%= pair.beer_type %>
+    </p>
+
+    <p>
+      <%= link_to 'Edit', edit_pair_path(pair) %>  |  <%= link_to 'Destroy', pair, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </p>
+  </div>
+<% end %>

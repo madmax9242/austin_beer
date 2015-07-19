@@ -31,8 +31,14 @@ class PairsController < ApplicationController
 		@pair = Pair.find(params[:id])
 	end
 
-	def destroy
-	end
+  def destroy
+  	@pair = Pair.find(params[:id])
+    @pair.destroy
+    respond_to do |format|
+      format.html { redirect_to pairs_url, notice: 'Food pairing was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
 
 	private
 
