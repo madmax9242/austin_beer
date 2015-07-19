@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Food:</strong>
+  <%= @pair.food %>
+</p>
+
+<p>
+  <strong>Beer:</strong>
+  <%= @pair.beer %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @pair.beer_type %>
+</p>
+
+<%= link_to 'Edit', edit_pair_path(@pair) %> |
+<%= link_to 'Back', pairs_path %>

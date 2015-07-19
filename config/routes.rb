@@ -7,9 +7,11 @@ Rails.application.routes.draw do
 
   resources :user_sessions
   resources :users
+  resources :pairs
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-  get 'users/show' => 'users#show', :as => :show
+  # get 'list' => 'pairs#index', :as => :list
+  # get 'users/show', to: 'users#show'
 
   get 'login' => 'user_sessions#new', :as => :login
   post 'logout' => 'user_sessions#destroy', :as => :logout
