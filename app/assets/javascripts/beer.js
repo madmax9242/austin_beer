@@ -1,7 +1,24 @@
 var test = "test";
 
 $(document).ready(function() {
-    check_beer();
+    //check_beer();
+    var beer_type = 'Bud Light';
+    $.ajax({
+        
+            url: '/proxy?url=https://api.brewerydb.com/v2/?key=5e62b4fe1d54936af2381e7885987a69&name=' + beer_type,
+            contentType: "application/json",
+            dataType: 'json',
+            type: 'get',
+            
+            success: function(data) {
+                alert('Test');
+                console.log(data);
+            },
+
+            error: function() {
+                alert('No dice');
+            }
+        });
 
 });
 

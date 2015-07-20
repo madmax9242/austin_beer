@@ -1,4 +1,8 @@
+require 'open-uri'
+
 class LookupsController < ApplicationController
-	def index
+	def index 
+		# url = request.fullpath.split("/proxy?url=")[1]
+		# render :text => open(url).read
 	end
 end
