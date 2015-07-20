@@ -14,8 +14,31 @@
  *= require_self
  */
 
+body  {
+	background-color: #dba94a;
+}
 
- .brandImage {
+.brand_image {
  	height: 1.5em;
  	width: 1.5em;
+ }
+
+.form  {
+	max-width: 60%;
+	margin: 0 auto;
+}
+
+.pair_div  {
+	background-color: #f4de80;
+	border: 1px solid black;
+	
+}
+
+.pairs_list {
+ 	max-width: 60%;
+ 	max-height: 500px;
+ 	border: 1px solid black;
+ 	overflow: scroll;
+ 	margin: 0 auto;
+ 	background-color: #f4de80;
  }

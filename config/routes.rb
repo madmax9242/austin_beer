@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   # get 'list' => 'pairs#index', :as => :list
   # get 'users/show', to: 'users#show'
 
+  get 'lookup' => 'pairs#lookup'
+
   get 'login' => 'user_sessions#new', :as => :login
   post 'logout' => 'user_sessions#destroy', :as => :logout
   # You can have the root of your site routed with "root"
