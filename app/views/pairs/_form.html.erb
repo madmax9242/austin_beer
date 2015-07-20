@@ -13,7 +13,7 @@
 	    	<%[['Blonde Ale', 'Blonde Ale'], ['Pale Ale', 'Pale Ale'], ['India Pale Ale', 'India Pale Ale'], ['Imperial IPA', 'Imperial IPA'], ['Amber/Red Ale', 'Amber/Red Ale'], ['Scotch Ale', 'Scotch Ale'], ['Brown Ale', 'Brown Ale'], ['Abbey Dubbel', 'Abbey Dubbel'], ['Abbey Tripel', 'Abbey Tripel'], ['Strong Ale', 'Strong Ale'], ['Barley Wine', 'Barley Wine'], ['Porter', 'Porter'], ['Dry Stout', 'Dry Stout'], ['Oatmeal Stout', 'Oatmeal Stout'], ['Imperial Stout', 'Imperial Stout'], ['Hefeweizen', 'Hefeweizen'], ['American Wheat Ale', 'American Wheat Ale'], ['Witbier', 'Witbier'], ['Dunkelweizen', 'Dunkelweizen'], ['Weizenbock', 'Weizenbock'], ['Classic Pilsener', 'Classic Pilsener'], ['Helles/Dortmunder', 'Helles/Dortmunder'], ['Oktoberfest/Marzen', 'Oktoberfest/Marzen'], ['Amber Lager', 'Amber Lager'], ['Dark Lager/Dunkel', 'Dark Lager/Dunkel'], ['Pale Bock', 'Pale Bock'], ['Doppelbock', 'Doppelbock']].each do |c| %>
 	      <%= content_tag(:option, c.first, value: c.last) %>
 	       <% end %>
-	    <% end %>  <!-- <a href="#" id="beer-check">I'm not sure...</a> -->
+	    <% end %> <a href="/lookups">Test</a> <%#= link_to "I'm not sure...", :lookups  %>  <!-- <a href="#" id="beer-check">I'm not sure...</a> -->
 	  </div>
 	  <div class="actions">
 	    <%= f.submit %>

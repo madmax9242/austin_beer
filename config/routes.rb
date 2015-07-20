@@ -8,12 +8,13 @@ Rails.application.routes.draw do
   resources :user_sessions
   resources :users
   resources :pairs
+  resources :lookups, only: [:index]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   # get 'list' => 'pairs#index', :as => :list
   # get 'users/show', to: 'users#show'
 
-  get 'lookup' => 'pairs#lookup'
+  get 'pairs/lookup' => 'pairs#new'
 
   get 'login' => 'user_sessions#new', :as => :login
   post 'logout' => 'user_sessions#destroy', :as => :logout
