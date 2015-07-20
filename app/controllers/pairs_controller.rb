@@ -1,4 +1,8 @@
 class PairsController < ApplicationController
+	def lookup
+
+	end
+
 	def index
 		@pairs = Pair.all 
 	end
