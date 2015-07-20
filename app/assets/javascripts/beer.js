@@ -11,8 +11,8 @@ function check_beer() {
         var beer_type = $('#beer-name').val();
         $.ajax({
     
-            url: 'https://api.brewerydb.com/v2/?key=5e62b4fe1d54936af2381e7885987a69&name=' + beer_type,
-            format: 'json',
+            url: '/proxy?url=https://api.brewerydb.com/v2/?key=5e62b4fe1d54936af2381e7885987a69&name=' + beer_type,
+            contentType: "application/json",
             dataType: 'json',
             type: 'get',
 
