@@ -3,12 +3,11 @@ $(document).ready(function() {
     var beer_type = $('#beer-name').val();
     console.log(beer_type);
     $.ajax({
-    	dataType: 'json',
-    	type: 'get',
-    	url: 'http://api.brewerydb.com/v2/?key=5e62b4fe1d54936af2381e7885987a69',
-    	data: {
-    		name: 'Bud Light'
-    	},
+    	
+    	url: 'http://api.brewerydb.com/v2/?key=5e62b4fe1d54936af2381e7885987a69&name=' + beer_type,
+    	format: 'json',
+        dataType: 'json',
+        type: 'get',
 
     	success: function(data) {
     		alert('Test');
