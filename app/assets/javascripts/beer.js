@@ -4,7 +4,7 @@ $(document).ready(function() {
     console.log(beer_type);
     $.ajax({
     	
-    	url: 'http://api.brewerydb.com/v2/?key=5e62b4fe1d54936af2381e7885987a69&name=' + beer_type,
+    	url: 'https://api.brewerydb.com/v2/?key=5e62b4fe1d54936af2381e7885987a69&name=' + beer_type,
     	format: 'json',
         dataType: 'json',
         type: 'get',
