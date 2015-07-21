@@ -45,7 +45,7 @@ function filter_beer() {
                 for (var i = 0; i < data.length; i++) {
                     console.log(data[i]['beer_type']);
                     if (data[i]['beer_type'] == choice) {
-                        $('#pairs_list').html('');
+                        $('.pairs_div').html('<p></p>');
                         choice_array.push(data[i]);
                         console.log(choice_array);
                     }
