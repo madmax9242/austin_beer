@@ -1,9 +1,4 @@
 class PairsController < ApplicationController
-	# def lookup
-	# 	data = BreweryDb.beers
-	# 	puts data
-	# 	puts 'test'
-	# end
 
 	def index
 		@filter = 'All'

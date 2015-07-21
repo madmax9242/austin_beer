@@ -1,3 +1,0 @@
-# class BreweryDBController < ApplicationController
-
-# end

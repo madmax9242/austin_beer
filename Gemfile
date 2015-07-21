@@ -15,7 +15,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 gem 'sorcery'
 # Used to query API better
-gem 'brewerydb'
+# gem 'brewerydb'
 # Use rails_12factor for better debug logs
 gem 'rails_12factor'
 # Use jquery as the JavaScript library
