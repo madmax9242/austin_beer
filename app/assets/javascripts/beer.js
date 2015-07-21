@@ -1,4 +1,4 @@
-var test = "test";
+// var test = "test";
 
 $(document).ready(function() {
     check_beer();
@@ -35,7 +35,7 @@ function filter_beer() {
         var choice = $('#beer-selector').val();
         $('.hidden').val(choice);
         $.ajax({
-            url: '/pairs',
+            url: '/',
             method: 'GET',
             dataType: 'json',
 
@@ -47,9 +47,28 @@ function filter_beer() {
                 alert('No dice');
             }
 
-        })
+        });
     });
 }
+
+$('#beer-selector').change(function() {
+        var choice = $('#beer-selector').val();
+        $('.hidden').val(choice);
+        $.ajax({
+            url: '/',
+            method: 'GET',
+            dataType: 'json',
+
+            success: function(data) {
+                console.log(data);
+            },
+
+            error: function(response) {
+                alert('No dice');
+            }
+
+        });
+});
 
 
 
