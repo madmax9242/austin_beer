@@ -43,8 +43,8 @@ function filter_beer() {
                 console.log(data);
             },
 
-            error: function(response) {
-                alert('No dice');
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.log(textStatus + "    " + errorThrown);
             }
 
         });
@@ -63,8 +63,8 @@ $('#beer-selector').change(function() {
                 console.log(data);
             },
 
-            error: function(response) {
-                alert('No dice');
+            error: function(jqXHR, textStatus, errorThrown) {
+                console.log(textStatus + "    " + errorThrown);
             }
 
         });
