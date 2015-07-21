@@ -52,6 +52,40 @@
     <p id="notice"><%= flash[:notice] %></p>
     <p id="alert"><%= flash[:alert] %></p>
   </div>
+  <span class="hidden"><% @filter %></span>
+  <div id="beer-filter" >
+    <select id="beer-selector">
+      <option value="All">All</option>
+      <option value="Blonde Ale">Blonde Ale</option>
+      <option value="Pale Ale">Pale Ale</option>
+      <option value="India Pale Ale">India Pale Ale</option>
+      <option value="Amber/Red Ale">Amber/Red Ale</option>
+      <option value="Scotch Ale">Scotch Ale</option>
+      <option value="Brown Ale">Brown Ale</option>
+      <option value="Abbey Dubbel">Abbey Dubbel</option>
+      <option value="Abbey Tripel">Abbey Tripel</option>
+      <option value="Strong Ale">Strong Ale</option>
+      <option value="Barley Wine">Barley Wine</option>
+      <option value="Porter">Porter</option>
+      <option value="Dry Stout">Dry Stout</option>
+      <option value="Oatmeal Stout">Oatmeal Stout</option>
+      <option value="Imperial Stout">Imperial Stout</option>
+      <option value="Hefeweizen">Hefeweizen</option>
+      <option value="American Wheat Ale">American Wheat Ale</option>
+      <option value="Witbier">Witbier</option>
+      <option value="Dunkelweizen">Dunkelweizen</option>
+      <option value="Weizenbock">Weizenbock</option>
+      <option value="Classic Pilsener">Classic Pilsener</option>
+      <option value="Helles/Dortmunder">Helles/Dortmunder</option>
+      <option value="Oktoberfest/Marzen">Oktoberfest/Marzen</option>
+      <option value="Amber Lager">Amber Lager</option>
+      <option value="Dark Lager/Dunkel">Dark Lager/Dunkel</option>
+      <option value="Pale Bock">Pale Bock</option>
+      <option value="Doppelbock">Doppelbock</option>
+
+    </select>
+
+  </div>
   <div class="pairs_list">
     <%= yield %>
   </div>

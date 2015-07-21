@@ -28,17 +28,27 @@ body  {
 	margin: 0 auto;
 }
 
+.hidden  {
+	display: none;
+}
+
 .pair_div  {
 	background-color: #f4de80;
 	border: 1px solid black;
 	
 }
 
-.pairs_list {
+.pairs_list  {
  	max-width: 60%;
  	max-height: 500px;
  	border: 1px solid black;
  	overflow: scroll;
  	margin: 0 auto;
  	background-color: #f4de80;
+ }
+
+ #beer-filter  {
+ 	position: absolute;
+ 	top: 11%;
+ 	right: 20%;
  }

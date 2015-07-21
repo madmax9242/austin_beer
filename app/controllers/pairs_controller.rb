@@ -1,9 +1,12 @@
 class PairsController < ApplicationController
-	def lookup
-
-	end
+	# def lookup
+	# 	data = BreweryDb.beers
+	# 	puts data
+	# 	puts 'test'
+	# end
 
 	def index
+		@filter = 'All'
 		@pairs = Pair.all 
 	end
 
@@ -14,7 +17,7 @@ class PairsController < ApplicationController
 	def create
 		@pair = Pair.new(pair_params)
 		@pair.user_id = current_user.id
-		@pair.save
+		# @pair.save
 		# redirect_to :pairs
 	    respond_to do |format|
 	      if @pair.save

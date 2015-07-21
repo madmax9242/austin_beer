@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   get 'login' => 'user_sessions#new', :as => :login
   post 'logout' => 'user_sessions#destroy', :as => :logout
   # You can have the root of your site routed with "root"
-  root 'users#index'
+  root 'pairs#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

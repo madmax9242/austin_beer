@@ -2,6 +2,7 @@ var test = "test";
 
 $(document).ready(function() {
     check_beer();
+    filter_beer();
 
 });
 
@@ -27,6 +28,27 @@ function check_beer() {
         });
     });
 
+}
+
+function filter_beer() {
+    $('#beer-selector').change(function() {
+        var choice = $('#beer-selector').val();
+        $('.hidden').val(choice);
+        $.ajax({
+            url: '/pairs',
+            method: 'GET',
+            dataType: 'json',
+
+            success: function(data) {
+                console.log(data);
+            },
+
+            error: function(response) {
+                alert('No dice');
+            }
+
+        })
+    });
 }
 
 
