@@ -1,3 +1,3 @@
-class BreweryDBController < ApplicationController
+# class BreweryDBController < ApplicationController
 
-end
+# end
