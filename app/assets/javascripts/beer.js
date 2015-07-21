@@ -12,7 +12,7 @@ function check_beer() {
         var beer_type = $('#beer-name').val();
         $.ajax({
     
-            url: '/proxy?url=https://api.brewerydb.com/v2/?key=5e62b4fe1d54936af2381e7885987a69&name=' + beer_type,
+            url: 'https://api.brewerydb.com/v2/?key=5e62b4fe1d54936af2381e7885987a69&name=' + beer_type,
             contentType: "application/json",
             dataType: 'json',
             type: 'get',
@@ -35,12 +35,22 @@ function filter_beer() {
         var choice = $('#beer-selector').val();
         $('.hidden').val(choice);
         $.ajax({
-            url: '/',
+            url: '/pairs',
             method: 'GET',
             dataType: 'json',
 
             success: function(data) {
+                var choice_array = [];
                 console.log(data);
+                for (var i = 0; i < data.length; i++) {
+                    console.log(data[i]['beer_type']);
+                    if (data[i]['beer_type'] == choice) {
+                        $('#pairs_list').html('');
+                        choice_array.push(data[i]);
+                        console.log(choice_array);
+                    }
+                }
+
             },
 
             error: function(jqXHR, textStatus, errorThrown) {
@@ -51,24 +61,6 @@ function filter_beer() {
     });
 }
 
-$('#beer-selector').change(function() {
-        var choice = $('#beer-selector').val();
-        $('.hidden').val(choice);
-        $.ajax({
-            url: '/',
-            method: 'GET',
-            dataType: 'json',
-
-            success: function(data) {
-                console.log(data);
-            },
-
-            error: function(jqXHR, textStatus, errorThrown) {
-                console.log(textStatus + "    " + errorThrown);
-            }
-
-        });
-});
 
 
 

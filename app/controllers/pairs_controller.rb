@@ -1,7 +1,6 @@
 class PairsController < ApplicationController
 
 	def index
-		@filter = 'All'
 		@pairs = Pair.all 
 	end
 
